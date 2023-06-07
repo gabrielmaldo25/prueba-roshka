@@ -45,6 +45,7 @@ function App() {
         <div className="grid-container">
           {data.map((item) => (
             <Card
+              key={item.id}
               title={item.name}
               status={item.status}
               location={item.location.name}
