@@ -9,10 +9,10 @@ function App() {
   const [pageNumber, setPageNumber] = useState(1);
   const [isFetching, setIsFetching] = useState(false);
 
-  function fetchInfo(url) {
+  async function fetchInfo(url) {
     try {
       setIsFetching(true);
-      fetch(url)
+      await fetch(url)
         .then((response) => response.json())
         .then((data) => {
           setPageInfo(data.info);
